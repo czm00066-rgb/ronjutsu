@@ -1,0 +1,96 @@
+
+:root{
+  --bg:#0b0f17;
+  --panel: rgba(20, 26, 38, .72);
+  --panel2: rgba(11, 15, 23, .55);
+  --border: rgba(34,48,74,.9);
+  --text:#e8eefc;
+  --muted: rgba(232,238,252,.72);
+  --muted2: rgba(127,139,176,.75);
+  --accent:#6aa3ff;
+  --ok:#8be28b;
+  --warn:#ffb86b;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --r:18px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: radial-gradient(1200px 800px at 20% 0%, rgba(106,163,255,.15), transparent 55%),
+              radial-gradient(900px 600px at 80% 10%, rgba(139,92,246,.12), transparent 55%),
+              var(--bg);
+  color:var(--text);
+}
+.wrap{max-width:980px;margin:0 auto;padding:16px 14px 22px;}
+.topbar{
+  display:flex; align-items:center; gap:12px;
+  padding:14px 14px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: rgba(11,15,23,.35);
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+}
+.dot{width:10px;height:10px;border-radius:999px;background:var(--accent);opacity:.9;}
+.toptext h1{margin:0;font-size:20px;letter-spacing:.02em;}
+.sub{margin-top:4px;color:var(--muted2);font-size:12px;}
+.topright{margin-left:auto;}
+.pill{
+  padding:8px 12px;border-radius:999px;border:1px solid var(--border);
+  background: rgba(11,15,23,.35);color:var(--muted);font-size:12px;white-space:nowrap;
+}
+.tabs{display:flex; gap:10px; flex-wrap:wrap; margin: 10px 0 12px;}
+.tab{
+  padding:12px 14px;border-radius:999px;border:1px solid var(--border);
+  background: rgba(11,15,23,.35);color: var(--muted);cursor:pointer;font-weight:800;
+}
+.tab.active{color: var(--text);border-color: rgba(106,163,255,.7);box-shadow: 0 0 0 2px rgba(106,163,255,.15) inset;}
+.card{
+  border:1px solid var(--border);
+  border-radius: 22px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  padding:14px;
+  margin: 12px 0;
+  backdrop-filter: blur(10px);
+}
+.card-h{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:10px;}
+.kicker{color:var(--muted2); font-size:12px; font-weight:800; letter-spacing:.08em;}
+.right{display:flex; align-items:center; gap:10px;}
+.select, select{
+  padding:12px 12px;border-radius:14px;border:1px solid var(--border);
+  background: rgba(11,15,23,.35);color: var(--text);font-size:14px;min-width:240px;
+}
+.iconbtn{
+  width:46px; height:46px;border-radius: 14px;border:1px solid var(--border);
+  background: rgba(11,15,23,.35);color: var(--muted);font-weight:900;cursor:pointer;
+}
+.iconbtn:active{transform: translateY(1px);}
+.ta, textarea{
+  width:100%; min-height: 170px; resize: vertical; padding: 14px;
+  border-radius: var(--r); border: 1px solid rgba(34,48,74,.75);
+  background: rgba(11,15,23,.35); color: var(--text); font-size:16px; line-height:1.8; outline:none;
+}
+textarea::placeholder{color: rgba(127,139,176,.45); font-size: 11px;}
+.tools{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end;}
+.btn{
+  padding:12px 12px;border-radius: 14px;border:1px solid var(--border);
+  background: rgba(11,15,23,.35);color: var(--text);font-size:14px;cursor:pointer;
+}
+.btn:active{transform: translateY(1px);}
+.counter{
+  padding: 8px 12px;border-radius: 999px;border: 1px solid var(--border);
+  background: rgba(11,15,23,.35);font-size: 12px;color: var(--muted);white-space: nowrap;
+}
+.model{white-space: pre-wrap; line-height: 1.8; padding: 12px 14px;border-radius: var(--r);
+  border: 1px solid rgba(34,48,74,.75); background: rgba(11,15,23,.25); display:none;}
+.hint{margin-top:8px; font-size:12px; color: var(--muted2);}
+.grid2{display:grid; grid-template-columns: 1fr; gap:12px;}
+@media (min-width: 860px){ .grid2{grid-template-columns: 1fr 1fr;} }
+.small{font-size:12px;color:var(--muted2)}
+.linebox{padding:12px;border-radius:18px;border:1px solid rgba(34,48,74,.65);background: rgba(11,15,23,.28);}
+.linehead{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-bottom:8px}
+.lno{font-weight:900}
+.lbl{color: rgba(127,139,176,.75); font-size:12px; font-weight:800;}

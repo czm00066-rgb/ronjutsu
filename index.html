@@ -1,0 +1,42 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0f17" />
+  <title>キャリコン論述トレーニング（S1〜S4 統合・単一アプリ）</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <div class="dot"></div>
+    <div class="toptext">
+      <h1>キャリコン論述トレーニング（単一アプリ統合）</h1>
+      <div class="sub">S1〜S4｜フォルダ不要・同名ファイル衝突なし</div>
+    </div>
+    <div class="topright">
+      <div class="pill" id="status">S1</div>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="s1">S1 設問1</button>
+    <button class="tab" data-tab="s2">S2 設問2</button>
+    <button class="tab" data-tab="s3">S3 設問3</button>
+    <button class="tab" data-tab="s4">S4 設問4</button>
+  </nav>
+
+  <div id="mount"></div>
+
+  <div class="hint">※各モジュールの保存は localStorage に「S1_〜 / S2_〜」の接頭辞で分離して保存します。</div>
+</div>
+
+<script src="app.js"></script>
+<script>
+  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js').catch(()=>{}); }
+</script>
+</body>
+</html>
